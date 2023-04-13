@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="LoginDetailsContext" prefHeight="607.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.LoginDetailFormController">
+   <children>
+      <Label layoutX="15.0" layoutY="14.0" prefHeight="52.0" prefWidth="189.0" text="Login Deatils" textFill="#0e007c">
+         <font>
+            <Font name="Ebrima Bold" size="23.0" />
+         </font>
+      </Label>
+      <Line endX="770.0" layoutX="94.0" layoutY="118.0" startX="-64.0" stroke="#fcfcfc" />
+      <Label layoutX="25.0" layoutY="70.0" prefHeight="25.0" prefWidth="355.0" text="Change Username| Change Passward">
+         <font>
+            <Font name="Javanese Text" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNewUser" layoutX="814.0" layoutY="30.0" onAction="#AddNewLogDetailOnAction" prefHeight="52.0" prefWidth="116.0" style="-fx-background-color: linear-gradient(to right top, #379037, #329a32, #2ba32d, #22ad25, #13b71a);;" text="+ New " textFill="#fcfcfc">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="43.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUserID" layoutX="176.0" layoutY="162.0" prefHeight="25.0" prefWidth="200.0" unFocusColor="BLACK" />
+      <Text layoutX="478.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtPassword" layoutX="614.0" layoutY="155.0" prefHeight="25.0" prefWidth="200.0" unFocusColor="BLACK" />
+      <Text layoutX="45.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUserName" layoutX="177.0" layoutY="229.0" prefHeight="25.0" prefWidth="200.0" unFocusColor="BLACK" />
+      <JFXButton fx:id="btnSave" layoutX="596.0" layoutY="252.0" onAction="#SaveNewLogDetailOnAction" prefHeight="43.0" prefWidth="105.0" style="-fx-background-color: linear-gradient(to right top, #035c1a, #0c5815, #115410, #15500b, #184c06);;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="755.0" layoutY="252.0" onAction="#DeleteOnAction" prefHeight="43.0" prefWidth="105.0" style="-fx-background-color: linear-gradient(to right top, #590202, #720208, #8c030b, #a7050b, #c20909);;" text="Delete" textFill="#fffbfb">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblLogInDetail" layoutX="112.0" layoutY="347.0" prefHeight="222.0" prefWidth="751.0" style="-fx-background-color: grey; -fx-border-color: black;">
+         <columns>
+            <TableColumn fx:id="colUserID" prefWidth="228.0" style="fx-border-colour: red;" text="User ID" />
+            <TableColumn fx:id="colUserName" prefWidth="254.0" text="UserName" />
+            <TableColumn fx:id="colPassword" prefWidth="267.0" text="Password" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

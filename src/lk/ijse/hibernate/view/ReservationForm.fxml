@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ReservationFormContext" prefHeight="607.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.ReservationFormController">
+   <children>
+      <Ellipse fill="#c1c998c7" layoutX="631.0" layoutY="54.0" radiusX="87.0" radiusY="36.0" stroke="#d9d018" strokeType="INSIDE" />
+      <Label layoutX="15.0" layoutY="14.0" prefHeight="52.0" prefWidth="189.0" text="Reservation" textFill="#1400a8">
+         <font>
+            <Font name="Ebrima Bold" size="23.0" />
+         </font>
+      </Label>
+      <Line endX="828.0" layoutX="119.0" layoutY="299.0" startX="-81.0" stroke="WHITE" />
+      <Label layoutX="14.0" layoutY="60.0" prefHeight="43.0" prefWidth="216.0" text="Reserve room  | Delete reserve">
+         <font>
+            <Font name="Javanese Text" size="15.0" />
+         </font>
+      </Label>
+      <Text layoutX="29.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student  ID :" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="382.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student  Name :" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtStudentName" layoutX="531.0" layoutY="157.0" prefHeight="25.0" prefWidth="182.0" unFocusColor="BLACK" />
+      <Text layoutX="29.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation ID:" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="cmbStudentID" layoutX="169.0" layoutY="161.0" prefHeight="25.0" prefWidth="200.0" unFocusColor="BLACK" />
+      <TableView fx:id="tblReservation" layoutX="18.0" layoutY="382.0" onMouseClicked="#reservationTableClicked" prefHeight="208.0" prefWidth="943.0" style="-fx-background-color: grey; -fx-border-color: black;">
+         <columns>
+            <TableColumn fx:id="colReservationID" prefWidth="112.0" text="Reservation ID" />
+            <TableColumn fx:id="colRoomId" prefWidth="111.0" style="fx-border-colour: red;" text="Room ID" />
+            <TableColumn fx:id="colRoomType" prefWidth="146.0" text="Room Type" />
+            <TableColumn fx:id="colStudentQty" prefWidth="135.0" text="QTY" />
+            <TableColumn fx:id="colKeyMny" prefWidth="151.0" text="Key Money" />
+            <TableColumn fx:id="colStatus" prefWidth="156.0" text="Status" />
+            <TableColumn fx:id="colDelete" prefWidth="129.0" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="479.0" layoutY="317.0" onAction="#ReserveOnAction" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: linear-gradient(to right top, #1be935, #20d23b, #26bc3e, #2ba63f, #2e903f);;" text="Reserve" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="606.0" layoutY="314.0" onAction="#updateOnAction" prefHeight="34.0" prefWidth="105.0" style="-fx-background-color: linear-gradient(to right top, #e9e24d, #dad340, #cbc433, #bdb525, #aea714);;" text="Update" textFill="#fffbfb">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbRoomID" layoutX="169.0" layoutY="205.0" prefHeight="25.0" prefWidth="200.0" unFocusColor="BLACK" />
+      <Text layoutX="29.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room  ID :" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="382.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Type:" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtRoomType" layoutX="493.0" layoutY="205.0" prefHeight="25.0" prefWidth="182.0" unFocusColor="BLACK" />
+      <Text layoutX="702.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Money:" wrappingWidth="98.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtKeyMoney" layoutX="801.0" layoutY="210.0" prefHeight="25.0" prefWidth="161.0" unFocusColor="BLACK" />
+      <Text layoutX="29.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty of Room:" wrappingWidth="128.501953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtRoomQty" layoutX="169.0" layoutY="249.0" prefHeight="25.0" prefWidth="200.0" unFocusColor="BLACK" />
+      <Line endX="859.0" layoutX="117.0" layoutY="110.0" startX="-100.0" stroke="WHITE" />
+      <TextField fx:id="txtStatus" layoutX="29.0" layoutY="320.0" prefHeight="25.0" prefWidth="208.0" promptText="Status" />
+      <TextField fx:id="txtStudentQty" layoutX="254.0" layoutY="320.0" prefHeight="25.0" prefWidth="208.0" promptText=" Qty" />
+      <Label layoutX="293.0" layoutY="44.0" prefHeight="29.0" prefWidth="200.0" text="Room Availability" textFill="#c60000">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Line endX="-127.0" endY="33.0" layoutX="382.0" layoutY="60.0" startX="-127.0" startY="-45.0" />
+      <Text fx:id="lblRoomId" layoutX="598.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RM-1324">
+         <font>
+            <Font name="Impact" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblRoomType" layoutX="561.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AC" textAlignment="CENTER" wrappingWidth="146.50195664912462">
+         <font>
+            <Font name="Impact" size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblRoomQty" alignment="CENTER" layoutX="585.0" layoutY="56.0" prefHeight="34.0" prefWidth="99.0" textFill="#751414">
+         <font>
+            <Font name="Impact" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddToRemain" layoutX="724.0" layoutY="313.0" onAction="#AddToRemainOnAction" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: linear-gradient(to right top, #3968d4, #315fca, #2855c1, #1f4cb7, #1443ae);;" text="View  Remain Key-money Student">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblReserveID" alignment="CENTER" layoutX="176.0" layoutY="122.0" prefHeight="24.0" prefWidth="182.0" text="RID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
