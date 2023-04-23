@@ -21,7 +21,7 @@
                   <Font name="System Bold Italic" size="39.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtUserName" layoutX="108.0" layoutY="304.0" prefHeight="31.0" prefWidth="306.0" promptText="User Name" />
+            <JFXTextField fx:id="txtUserName" layoutX="108.0" layoutY="304.0" prefHeight="31.0" prefWidth="306.0" promptText="User ID" />
             <JFXTextField fx:id="txtPassword" layoutX="99.0" layoutY="409.0" prefHeight="31.0" prefWidth="313.0" promptText="Password" />
             <ImageView fitHeight="56.0" fitWidth="79.0" layoutX="32.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
                <image>
